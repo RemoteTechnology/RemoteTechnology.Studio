@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+          content="Студия веб и мобильной разработки: создаем современные сайты и приложения под ключ. Индивидуальный подход, качественная реализация и поддержка проектов. Закажите разработку уже сегодня!">
+    <title>RemoteTechnology | Студия разработки сайтов и мобильных приложений</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,
+        body{
+            background-color: #FFFFFF;
+            font-family: sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul li{
+            list-style: none;
+        }
+        button{
+            cursor: pointer;
+            background-color: #5EB8F0;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 5em;
+            padding: 1.1em;
+            border-color: #ffffff00;
+            color: #fff;
+            font-weight: 900;
+            font-size: 1em;
+        }
+        button:hover{
+            transition: .6s;
+            background-color: #229ae4;
+        }
+        .menu,
+        .questions__container,
+        footer{
+            background: #2D2C2C;
+        }
+        .menu{
+            width: 100%;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu__container{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu__contact{
+            display: flex;
+            align-items: center;
+            width: 12%;
+        }
+        .menu__contact--phone,
+        .menu__contact--social{
+            color: #fff;
+            font-weight: 800;
+            text-decoration: auto;
+        }
+        .menu__contact--phone{
+            width: 13%;
+            justify-content: space-between;
+        }
+        .menu__contact--social{
+            width: 17%;
+            justify-content: space-between;
+        }
+
+        .content{
+            width: 100%;
+        }
+        .content__greetings,
+        .content__portfolio,
+        .content__offer,
+        .content__questions{
+            padding: 1em;
+            margin-top: 10%;
+        }
+        .content__logotype,
+        .content__company,
+        .content__meta,
+        .content__brief
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content__logotype{
+            margin-bottom: 3em;
+        }
+        .content__company{
+            margin-bottom: 1em;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .content__meta{
+            margin-bottom: 2em;
+        }
+        .content__logotype img{
+            border-radius: 0.5em;
+        }
+        .content__brief button{
+            width: 15%;
+        }
+        .content__portfolio{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content__portfolio--card{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 90%;
+            padding: 2em;
+            background: #2D2C2C;
+            box-shadow: 2px 10px 5px 5px rgba(94, 184, 240, 0.34);
+            border-radius: 5em;
+        }
+        .content__card--header{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .content__card--title{
+            color: #fff;
+        }
+        .content__card--title h2,
+        .offer__title h2,
+        .questions__description h3{
+            font-size: 2.2em;
+        }
+        .content__card--href{
+            cursor: pointer;
+            background: linear-gradient(180deg, #5EB8F0 26.5%, #FFFFFF 100%);
+            border-radius: 10em;
+            width: 8em;
+            height: 8em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: -3em;
+            left: 8em;
+            color: #2D2C2C;
+        }
+        .content__card--href svg{
+            fill: #2D2C2C;
+            position: relative;
+            top: -2em;
+            left: 3em;
+        }
+        .content__card--href p{
+            position: relative;
+            top: 1em;
+            right: 1em;
+        }
+        .content__card--href:hover{
+            transition: .7s;
+            background: linear-gradient(15deg, #5EB8F0 26.5%, #FFFFFF 100%);
+        }
+        .content__card--href:hover path {
+            transition: .6s;
+            fill: #fff;
+        }
+        .content__card--href:hover p{
+            transition: .6s;
+            color: #fff;
+        }
+
+        .content__card--items{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .content__card--item{
+            width: 32.5%;
+            padding: 1em;
+            background-color: #FFFFFF;
+            margin-bottom: 1em;
+            border-radius: 0.6em;
+        }
+        .content__card--banner{
+            width: 100%;
+            margin-bottom: 1em;
+        }
+        .content__card--banner img{
+            width: 100%;
+        }
+        .content__card--body{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+        .content__card--name{
+            text-decoration: underline;
+        }
+        .content__card--body .content__card--href{
+            top: -0.6em;
+            left: 0;
+            width: 3em;
+            height: 3em;
+            background: #5EB8F0;
+        }
+        .content__card--body .content__card--href svg{
+            top: 0;
+            left: 0;
+        }
+
+        .content__offer{
+            /*background-color: #F5F5F5;*/
+            background: linear-gradient(120deg, #f5f5f5 26.5%, #5eb8f0 100%);
+        }
+        .offer__title{
+            text-align: center;
+            margin-top: 5em;
+            margin-bottom: 5em;
+        }
+        .offer__title span,
+        .questions__description span{
+            color: #5EB8F0;
+        }
+        .offer__container{
+            background-color: #2D2C2C;
+            border-radius: 1em;
+            padding: 3em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            color: #fff;
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 2em;
+        }
+        .offer__name{
+            width: 100%;
+            font-size: 1.6em;
+            text-decoration: underline;
+        }
+        .offer__list{
+            position: relative;
+            left: 1em;
+        }
+        .offer__list li{
+            margin-bottom: 1em;
+            margin-top: 1em;
+            font-weight: 900;
+        }
+        .offer__term,
+        .offer__price{
+            font-size: 1.2em;
+        }
+
+        .content__questions{
+            padding: 0;
+            margin-top: -8em;
+        }
+        .questions__container{
+            padding: 1em;
+            border-radius: 5em 5em 0em 0em;
+            box-shadow: 1px -10px 7px rgba(94, 184, 240, 0.34);
+            width: 100%;
+            /*position: relative;
+            top: -17em;*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .questions__description,
+        .questions__form{
+            width: 38%;
+            color: #fff;
+            margin-top: 5em;
+            margin-bottom: 3em;
+        }
+        .questions__description span{
+            font-size: 1.6em;
+            font-weight: 900;
+        }
+        .questions__form{
+
+        }
+        .form__container{
+            margin-bottom: 2em;
+        }
+        .form__container input,
+        .form__container textarea{
+            background-color: #FFFFFF;
+            padding: 1em;
+            border-radius: 0.6em;
+            width: 60%;
+        }
+        .form__container button{
+            width: 30%;
+            border-radius: 0.4em;
+        }
+        .footer__company{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer__company span{
+            color: #fff;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .footer__company span img{
+            width: 15%;
+            border-radius: 0.1em;
+        }
+        .footer__docs{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 4em;
+        }
+        .footer__item{
+            margin-bottom: 2em;
+        }
+        .footer__item a{
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="menu">
+        <div class="menu__container">
+            <a href="tel:+7 (999) 999 - 99 - 99" class="menu__contact menu__contact--phone">
+                <svg width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.1337 15.3663C22.0178 15.2501 21.88 15.1579 21.7284 15.095C21.5767 15.0321 21.4142 14.9997 21.25 14.9997C21.0858 14.9997 20.9233 15.0321 20.7716 15.095C20.62 15.1579 20.4822 15.2501 20.3662 15.3663L18.3737 17.3587C17.45 17.0837 15.7262 16.4587 14.6337 15.3663C13.5412 14.2738 12.9162 12.55 12.6412 11.6262L14.6337 9.63375C14.7499 9.51776 14.8421 9.38001 14.905 9.22837C14.9679 9.07672 15.0002 8.91417 15.0002 8.75C15.0002 8.58583 14.9679 8.42328 14.905 8.27163C14.8421 8.11999 14.7499 7.98223 14.6337 7.86625L9.63375 2.86625C9.51776 2.75007 9.38001 2.6579 9.22836 2.59501C9.07672 2.53212 8.91416 2.49975 8.75 2.49975C8.58583 2.49975 8.42327 2.53212 8.27163 2.59501C8.11999 2.6579 7.98223 2.75007 7.86625 2.86625L4.47625 6.25625C4.00125 6.73125 3.73375 7.38375 3.74375 8.05C3.7725 9.83 4.24375 16.0125 9.11625 20.885C13.9887 25.7575 20.1712 26.2275 21.9525 26.2575H21.9875C22.6475 26.2575 23.2712 25.9975 23.7437 25.525L27.1337 22.135C27.2499 22.019 27.3421 21.8813 27.405 21.7296C27.4679 21.578 27.5002 21.4154 27.5002 21.2512C27.5002 21.0871 27.4679 20.9245 27.405 20.7729C27.3421 20.6212 27.2499 20.4835 27.1337 20.3675L22.1337 15.3663ZM21.975 23.7562C20.415 23.73 15.0775 23.3113 10.8837 19.1162C6.67625 14.9088 6.26875 9.5525 6.24375 8.02375L8.75 5.5175L11.9825 8.75L10.3662 10.3663C10.2193 10.5131 10.1113 10.6942 10.0519 10.8932C9.99258 11.0922 9.98375 11.3029 10.0262 11.5062C10.0562 11.65 10.79 15.0587 12.865 17.1337C14.94 19.2087 18.3487 19.9425 18.4925 19.9725C18.6957 20.0162 18.9066 20.0081 19.1058 19.9489C19.305 19.8897 19.4861 19.7813 19.6325 19.6337L21.25 18.0175L24.4825 21.25L21.975 23.7562Z" fill="#F5F5F5"/>
+                </svg>
+                <span>+7 (999) 999 - 99 - 99</span>
+            </a>
+            <a href="https://t.me/mironov_vo" class="menu__contact menu__contact--social">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.8312 4.64625L3.66875 13.1925C2.15625 13.8 2.165 14.6437 3.39125 15.02L9.08125 16.795L22.2462 8.48875C22.8687 8.11 23.4375 8.31375 22.97 8.72875L12.3037 18.355H12.3012L12.3037 18.3562L11.9112 24.2212C12.4862 24.2212 12.74 23.9575 13.0625 23.6462L15.8262 20.9587L21.575 25.205C22.635 25.7887 23.3962 25.4887 23.66 24.2237L27.4337 6.43875C27.82 4.89 26.8425 4.18875 25.8312 4.64625Z" fill="#35B2FF"/>
+                </svg>
+                <span>Напишите нам в Telegramm</span>
+            </a>
+        </div>
+    </header>
+    <main class="content">
+        <div class="content__greetings">
+            <div class="content__logotype">
+                <img src="{{ url_for('static', filename='media/logo.svg') }}" class="animate__animated animate__bounceInRight" alt="RemoteTechnology">
+            </div>
+            <div class="content__company">
+                <h1 class="animate__animated animate__bounceInLeft">
+                    <strong>REMOTE TECHNOLOGY</strong>
+                </h1>
+            </div>
+            <div class="content__meta">
+                <p>Студия разработки веб-сайтов и мобильных приложений</p>
+            </div>
+            <div class="content__brief">
+                <button type="button" class="animate__animated animate__bounce">
+                    <strong>ПРОЙТИ БРИФ</strong>
+                </button>
+            </div>
+        </div>
+        <div class="content__portfolio">
+            <div class="content__portfolio--card">
+                <div class="content__card--header">
+                    <div class="content__card--title">
+                        <h2>
+                            <span>
+                                <span style="color: #5EB8F0;">НАШИ</span>
+                                <br>
+                                <span style="position: relative; left: 10%;">ПРОЕКТЫ</span>
+                            </span>
+                        </h2>
+                    </div>
+                    <a href="https://t.me/mironov_vo" class="content__card--href">
+                        <svg width="27" height="25" viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.1414 23.0665L18.9161 24.4454L26.7984 6.99521L8.89358 0.454794L7.2318 4.13372L18.6923 8.32009L0.264113 16.1165L1.75846 19.6934L20.1866 11.897L15.1414 23.0665Z" fill="#2D2C2C"/>
+                        </svg>
+                        <p>ОБСУДИТЬ<br>ПРОЕКТ</p>
+                    </a>
+                </div>
+                <div class="content__card--items">
+                    <div class="content__card--item">
+                        <div class="content__card--banner">
+                            <img src="{{ url_for('static', filename='media/image-1.png') }}" alt="Сайт Печати5">
+                        </div>
+                        <div class="content__card--body">
+                            <div class="content__card--name">
+                                <h3>Печати5</h3>
+                            </div>
+                            <a class="content__card--href">
+                                <svg width="27" height="25" viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.1414 23.0665L18.9161 24.4454L26.7984 6.99521L8.89358 0.454794L7.2318 4.13372L18.6923 8.32009L0.264113 16.1165L1.75846 19.6934L20.1866 11.897L15.1414 23.0665Z" fill="#2D2C2C"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content__card--item">
+                        <div class="content__card--banner">
+                            <img src="{{ url_for('static', filename='media/image-2.png') }}" alt="SportExperts">
+                        </div>
+                        <div class="content__card--body">
+                            <div class="content__card--name">
+                                <h3>SportExperts</h3>
+                            </div>
+                            <a class="content__card--href">
+                                <svg width="27" height="25" viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.1414 23.0665L18.9161 24.4454L26.7984 6.99521L8.89358 0.454794L7.2318 4.13372L18.6923 8.32009L0.264113 16.1165L1.75846 19.6934L20.1866 11.897L15.1414 23.0665Z" fill="#2D2C2C"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content__card--item">
+                        <div class="content__card--banner">
+                            <img src="{{ url_for('static', filename='media/image-1.png') }}" alt="Jalur">
+                        </div>
+                        <div class="content__card--body">
+                            <div class="content__card--name">
+                                <h3>Jalur</h3>
+                            </div>
+                            <a class="content__card--href">
+                                <svg width="27" height="25" viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.1414 23.0665L18.9161 24.4454L26.7984 6.99521L8.89358 0.454794L7.2318 4.13372L18.6923 8.32009L0.264113 16.1165L1.75846 19.6934L20.1866 11.897L15.1414 23.0665Z" fill="#2D2C2C"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content__card--item">
+                        <div class="content__card--banner">
+                            <img src="{{ url_for('static', filename='media/image-4.png') }}" alt="ТОЧКА БУДУЩЕГО">
+                        </div>
+                        <div class="content__card--body">
+                            <div class="content__card--name">
+                                <h3>ТОЧКА БУДУЩЕГО</h3>
+                            </div>
+                            <a class="content__card--href">
+                                <svg width="27" height="25" viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.1414 23.0665L18.9161 24.4454L26.7984 6.99521L8.89358 0.454794L7.2318 4.13372L18.6923 8.32009L0.264113 16.1165L1.75846 19.6934L20.1866 11.897L15.1414 23.0665Z" fill="#2D2C2C"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content__card--item">
+                        <div class="content__card--banner">
+                            <img src="{{ url_for('static', filename='media/image-1.png') }}" alt="KYONE">
+                        </div>
+                        <div class="content__card--body">
+                            <div class="content__card--name">
+                                <h3>KYONE</h3>
+                            </div>
+                            <a class="content__card--href">
+                                <svg width="27" height="25" viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.1414 23.0665L18.9161 24.4454L26.7984 6.99521L8.89358 0.454794L7.2318 4.13372L18.6923 8.32009L0.264113 16.1165L1.75846 19.6934L20.1866 11.897L15.1414 23.0665Z" fill="#2D2C2C"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content__card--item">
+                        <div class="content__card--banner">
+                            <img src="{{ url_for('static', filename='media/image-1.png') }}" alt="UFOFOOD">
+                        </div>
+                        <div class="content__card--body">
+                            <div class="content__card--name">
+                                <h3>UFOFOOD</h3>
+                            </div>
+                            <a class="content__card--href">
+                                <svg width="27" height="25" viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.1414 23.0665L18.9161 24.4454L26.7984 6.99521L8.89358 0.454794L7.2318 4.13372L18.6923 8.32009L0.264113 16.1165L1.75846 19.6934L20.1866 11.897L15.1414 23.0665Z" fill="#2D2C2C"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="content__offer">
+            <div class="offer__title">
+                <h2>ЧТО <span>МЫ</span> ПРЕДЛАГАЕМ</h2>
+            </div>
+            <div class="offer__container">
+                <section class="offer__name">
+                    <h3>Разработка одностраничного сайта</h3>
+                </section>
+                <section class="offer__list">
+                    <ul>
+                        <li>+ дизайн</li>
+                        <li>+ вёрстка</li>
+                        <li>+ посадка на Wordpress (или на нативные      решения, админка в подарок)</li>
+                        <li>+ SEO оптимизация</li>
+                        <li>+ подключение метрик</li>
+                    </ul>
+                </section>
+                <section class="offer__term">
+                    <h3>Срок: от 2 дней</h3>
+                </section>
+                <section class="offer__price">
+                    <h3>от 800 р/ч</h3>
+                </section>
+            </div>
+            <div class="offer__container">
+                <section class="offer__name">
+                    <h3>Разработка многостраничного сайта</h3>
+                </section>
+                <section class="offer__list">
+                    <ul>
+                        <li>+ дизайн</li>
+                        <li>+ вёрстка</li>
+                        <li>+ разработка бизнес логики</li>
+                        <li>+ разработка логики представления</li>
+                        <li>+ SEO оптимизация</li>
+                        <li>+ подключение метрик</li>
+                    </ul>
+                </section>
+                <section class="offer__term">
+                    <h3>Срок: от 1 недели</h3>
+                </section>
+                <section class="offer__price">
+                    <h3>от 1200 р/ч</h3>
+                </section>
+            </div>
+            <div class="offer__container">
+                <section class="offer__name">
+                    <h3>Разработка мобильного приложения</h3>
+                </section>
+                <section class="offer__list">
+                    <ul>
+                        <li>+ дизайн</li>
+                        <li>+ разработка бизнес логики</li>
+                        <li>+ разработка логики представления</li>
+                        <li>+ публикация приложения</li>
+                        <li>+ админ панель в подарок</li>
+                    </ul>
+                </section>
+                <section class="offer__term">
+                    <h3>Срок: от 3 недель</h3>
+                </section>
+                <section class="offer__price">
+                    <h3>от 1200 р/ч</h3>
+                </section>
+            </div>
+            <div style="margin: 20em;"></div>
+        </div>
+        <div class="content__questions">
+            <div class="questions__container">
+                <div class="questions__description">
+                    <h3>ОСТАЛИСЬ ВОПРОСЫ<span>?</span></h3>
+                    <br>
+                    <p>Оставьте заявку и мы свяжемся с вами в ближайшее время.</p>
+                </div>
+                <div class="questions__form">
+                    <form action="#" method="POST">
+                        <div class="form__container">
+                            <input type="text" name="fio" placeholder="Введите ФИО">
+                        </div>
+                        <div class="form__container">
+                            <input type="tel" name="phone" placeholder="Введите номер телефона">
+                        </div>
+                        <div class="form__container">
+                            <textarea name="description" cols="30" rows="10">Опишите ваш вопрос...</textarea>
+                        </div>
+                        <div class="form__container">
+                            <button type="submit" class="animate__animated animate__bounce">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__company">
+            <span>
+                <img src="{{ url_for('static', filename='media/logo.svg') }}" alt="RemoteTechnology">RemoteTechnology
+            </span>
+        </div>
+        <div class="footer__docs">
+            <div class="footer__item">
+                <a href="#">Политика обработки персональных данных</a>
+            </div>
+            <div class="footer__item">
+                <a href="#">Пользовательское соглашение</a>
+            </div>
+            <div class="footer__item">
+                <a href="#">Стоимость услуг</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Скрипты
+    </script>
+</body>
+</html>
